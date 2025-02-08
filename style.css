@@ -1,0 +1,70 @@
+#btn-position {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.btn-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  background: #f98138;
+  border-radius: 35px;
+}
+
+.btn-create .sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.btn-create svg {
+  scale: 1.4;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.btn-create_text {
+  color: rgb(255, 255, 255);
+  font-size: 1.4em;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+    opacity 0.3s ease 0.2s;
+}
+
+.btn-create:hover {
+  width: 260px;
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) translateX(10px);
+  background-color: #fa701b;
+}
+
+.btn-create:hover .sign {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+  position: absolute;
+}
+
+.btn-create:hover .btn-create_text {
+  max-width: 200px;
+  opacity: 1;
+}
+
+.btn-create:active {
+  transform: translateY(0);
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
